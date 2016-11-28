@@ -18,7 +18,7 @@ class  Generic
         $result = null;
         $tbl = $this->_resource->getTableName($entity);
         if ($bind instanceof DataObject) {
-            $data = $bind->getData();
+            $data = $bind->get();
         } else {
             $data = $bind;
         }
