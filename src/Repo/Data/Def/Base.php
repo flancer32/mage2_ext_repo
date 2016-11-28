@@ -1,0 +1,18 @@
+<?php
+/**
+ * Base class for persistence entities (match to tables/views in DB).
+ *
+ * User: Alex Gusev <alex@flancer64.com>
+ */
+namespace Flancer32\Lib\Repo\Data\Entity;
+
+abstract class Base
+    extends \Flancer32\Lib\DataObject
+    implements \Flancer32\Lib\Repo\Data\IEntity
+{
+
+    public function getEntityName()
+    {
+        return static::ENTITY_NAME; // "static::" will use child attribute value
+    }
+}

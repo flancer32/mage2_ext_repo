@@ -6,6 +6,6 @@
  */
 \Magento\Framework\Component\ComponentRegistrar::register(
     \Magento\Framework\Component\ComponentRegistrar::MODULE,
-    \Flancer32\Repo\Config::MODULE,
+    \Flancer32\Lib\Repo\Config::MODULE,
     __DIR__
 );
