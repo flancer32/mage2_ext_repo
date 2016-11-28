@@ -2,7 +2,7 @@
 /**
  * User: Alex Gusev <alex@flancer64.com>
  */
-namespace Flancer32\Lib\Repo;
+namespace Flancer32\Lib\Repo\Repo;
 
 use Flancer32\Lib\DataObject;
 
@@ -10,7 +10,7 @@ use Flancer32\Lib\DataObject;
  * Base interface for CRUD repositories (general Create-Read-Update-Delete operations).
  */
 interface ICrud
-    extends \Flancer32\Lib\Repo\IDataSource
+    extends \Flancer32\Lib\Repo\Repo\IDataSource
 {
     /**
      * Create new data instance (simple entity or aggregate) using $data. Exception is thrown in case of any error.

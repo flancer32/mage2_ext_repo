@@ -2,13 +2,13 @@
 /**
  * User: Alex Gusev <alex@flancer64.com>
  */
-namespace Flancer32\Lib\Repo\Def;
+namespace Flancer32\Lib\Repo\Repo\Def;
 
 /**
  * Base class for DB repositories implementations.
  */
 abstract class Db
-    implements \Flancer32\Lib\Repo\IDb
+    implements \Flancer32\Lib\Repo\Repo\IDb
 {
     /** @var  \Magento\Framework\DB\Adapter\AdapterInterface */
     protected $_conn;

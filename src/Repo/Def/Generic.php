@@ -4,13 +4,13 @@
  *
  * User: Alex Gusev <alex@flancer64.com>
  */
-namespace Flancer32\Lib\Repo\Def;
+namespace Flancer32\Lib\Repo\Repo\Def;
 
 use Flancer32\Lib\DataObject;
 
 class  Generic
-    extends \Flancer32\Lib\Repo\Def\Db
-    implements \Flancer32\Lib\Repo\IGeneric
+    extends \Flancer32\Lib\Repo\Repo\Def\Db
+    implements \Flancer32\Lib\Repo\Repo\IGeneric
 {
 
     public function addEntity($entity, $bind)

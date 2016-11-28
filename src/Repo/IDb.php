@@ -2,7 +2,7 @@
 /**
  * User: Alex Gusev <alex@flancer64.com>
  */
-namespace Flancer32\Lib\Repo;
+namespace Flancer32\Lib\Repo\Repo;
 
 /**
  * Base interface for MySQL DB repository.

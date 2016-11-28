@@ -2,14 +2,14 @@
 /**
  * User: Alex Gusev <alex@flancer64.com>
  */
-namespace Flancer32\Lib\Repo\Def;
+namespace Flancer32\Lib\Repo\Repo\Def;
 
 /**
  * Default implementation for CRUD repository to do read-write operations with database. All methods throw exceptions.
  */
 abstract class Crud
-    extends \Flancer32\Lib\Repo\Def\Db
-    implements \Flancer32\Lib\Repo\ICrud
+    extends \Flancer32\Lib\Repo\Repo\Def\Db
+    implements \Flancer32\Lib\Repo\Repo\ICrud
 {
     public function create($data)
     {

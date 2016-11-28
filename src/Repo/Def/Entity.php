@@ -4,13 +4,13 @@
  *
  * User: Alex Gusev <alex@flancer64.com>
  */
-namespace Flancer32\Lib\Repo\Def;
+namespace Flancer32\Lib\Repo\Repo\Def;
 
 use Flancer32\Lib\DataObject;
 
 class Entity
-    extends \Flancer32\Lib\Repo\Def\Crud
-    implements \Flancer32\Lib\Repo\IEntity
+    extends \Flancer32\Lib\Repo\Repo\Def\Crud
+    implements \Flancer32\Lib\Repo\Repo\IEntity
 {
     /** @var  string Class name for the related entity. */
     protected $_entityClassName;
@@ -18,20 +18,20 @@ class Entity
     protected $_entityName;
     /** @var  string Name of the first attribute from primary key */
     protected $_idFieldName;
-    /** @var  \Flancer32\Lib\Repo\Data\IEntity entity instance */
+    /** @var  \Flancer32\Lib\Repo\Repo\Data\IEntity entity instance */
     protected $_refEntity;
-    /** @var \Flancer32\Lib\Repo\IGeneric */
+    /** @var \Flancer32\Lib\Repo\Repo\IGeneric */
     protected $_repoGeneric;
 
     /**
      * Entity constructor.
      * @param \Magento\Framework\App\ResourceConnection $resource
-     * @param \Flancer32\Lib\Repo\IGeneric $repoGeneric
+     * @param \Flancer32\Lib\Repo\Repo\IGeneric $repoGeneric
      * @param string $entityClassName
      */
     public function __construct(
         \Magento\Framework\App\ResourceConnection $resource,
-        \Flancer32\Lib\Repo\IGeneric $repoGeneric,
+        \Flancer32\Lib\Repo\Repo\IGeneric $repoGeneric,
         $entityClassName
     ) {
         parent::__construct($resource);

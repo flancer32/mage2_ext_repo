@@ -4,7 +4,7 @@
  *
  * User: Alex Gusev <alex@flancer64.com>
  */
-namespace Flancer32\Lib\Repo\Data;
+namespace Flancer32\Lib\Repo\Repo\Data;
 
 
 interface IEntity

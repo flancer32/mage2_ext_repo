@@ -4,11 +4,11 @@
  *
  * User: Alex Gusev <alex@flancer64.com>
  */
-namespace Flancer32\Lib\Repo\Data\Def;
+namespace Flancer32\Lib\Repo\Repo\Data\Def;
 
 abstract class Entity
     extends \Flancer32\Lib\DataObject
-    implements \Flancer32\Lib\Repo\Data\IEntity
+    implements \Flancer32\Lib\Repo\Repo\Data\IEntity
 {
 
     public function getEntityName()
