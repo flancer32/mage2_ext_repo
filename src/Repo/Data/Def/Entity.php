@@ -4,9 +4,9 @@
  *
  * User: Alex Gusev <alex@flancer64.com>
  */
-namespace Flancer32\Lib\Repo\Data\Entity;
+namespace Flancer32\Lib\Repo\Data\Def;
 
-abstract class Base
+abstract class Entity
     extends \Flancer32\Lib\DataObject
     implements \Flancer32\Lib\Repo\Data\IEntity
 {
