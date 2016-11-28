@@ -16,7 +16,7 @@
       "src/registration.php"
     ],
     "psr-4": {
-      "Flancer32\\Lib\\Repo\\": "src/"
+      "Flancer32\\Lib\\": "src/"
     }
   }
 }
