@@ -87,7 +87,7 @@ class  Generic
         $query = $this->_conn->select();
         $query->from($tbl, $cols);
         foreach (array_keys($id) as $field) {
-            $query->where("$field=:$field");
+            $query->where("`$field`=:$field");
         }
         $result = $this->_conn->fetchRow($query, $id);
         return $result;
