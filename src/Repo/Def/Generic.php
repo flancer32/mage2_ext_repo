@@ -4,9 +4,10 @@
  *
  * User: Alex Gusev <alex@flancer64.com>
  */
+
 namespace Flancer32\Lib\Repo\Repo\Def;
 
-use Flancer32\Lib\DataObject;
+use Flancer32\Lib\Data;
 
 class  Generic
     extends \Flancer32\Lib\Repo\Repo\Def\Db
@@ -17,7 +18,7 @@ class  Generic
     {
         $result = null;
         $tbl = $this->_resource->getTableName($entity);
-        if ($bind instanceof DataObject) {
+        if ($bind instanceof Data) {
             $data = (array)$bind->get();
         } else {
             $data = $bind;
@@ -107,8 +108,8 @@ class  Generic
     public function updateEntity($entity, $bind, $where = null)
     {
         $tbl = $this->_resource->getTableName($entity);
-        if ($bind instanceof DataObject) {
-            $data = $bind->getData();
+        if ($bind instanceof Data) {
+            $data = $bind->get();
         } else {
             $data = $bind;
         }
@@ -124,8 +125,8 @@ class  Generic
     public function updateEntityById($entity, $bind, $id)
     {
         $tbl = $this->_resource->getTableName($entity);
-        if ($bind instanceof DataObject) {
-            $data = $bind->getData();
+        if ($bind instanceof Data) {
+            $data = $bind->get();
         } else {
             $data = $bind;
         }

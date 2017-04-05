@@ -4,9 +4,10 @@
  *
  * User: Alex Gusev <alex@flancer64.com>
  */
+
 namespace Flancer32\Lib\Repo\Repo\Def;
 
-use Flancer32\Lib\DataObject;
+use Flancer32\Lib\Data;
 
 class Entity
     extends \Flancer32\Lib\Repo\Repo\Def\Crud
@@ -50,7 +51,7 @@ class Entity
         /** @var DataObject $result */
         $result = new $this->_entityClassName();
         if ($data) {
-            $result->setData($data);
+            $result->set($data);
         }
         return $result;
     }
@@ -143,8 +144,8 @@ class Entity
 
     public function replace($data)
     {
-        if ($data instanceof DataObject) {
-            $data = $data->getData();
+        if ($data instanceof Data) {
+            $data = $data->get();
         }
         $result = $this->_repoGeneric->replaceEntity($this->_entityName, $data);
         return $result;
