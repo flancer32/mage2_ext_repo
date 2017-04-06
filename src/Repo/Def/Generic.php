@@ -47,7 +47,7 @@ class  Generic
         $tbl = $this->_resource->getTableName($entity);
         $where = [];
         foreach ($id as $field => $value) {
-            $where["$field=?"] = $value;
+            $where["`$field`=?"] = $value;
         }
         $result = $this->_conn->delete($tbl, $where);
         return $result;
