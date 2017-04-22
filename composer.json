@@ -10,7 +10,9 @@
       "email": "alex@flancer64.com"
     }
   ],
-  "require": {},
+  "require": {
+    "flancer32/php_data_object": "dev-master"
+  },
   "autoload": {
     "files": [
       "src/registration.php"
