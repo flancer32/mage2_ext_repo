@@ -11,7 +11,7 @@
     }
   ],
   "require": {
-    "flancer32/php_data_object": "^0.2"
+    "flancer32/php_data_object": "dev-master"
   },
   "autoload": {
     "files": [
