@@ -7,8 +7,9 @@
 
 namespace Flancer32\Lib\Repo\Helper;
 
-use Flancer32\Lib\Data as DataObject;
+use Flancer32\Lib\Data as Data;
 use Flancer32\Lib\Repo\Helper\Dem\Cfg as DemCfg;
+use Flancer32\Lib\Repo\Helper\Dem\DemType as DemType;
 
 class Dem
     implements \Flancer32\Lib\Repo\Api\Helper\Dem
@@ -113,7 +114,7 @@ class Dem
      *
      * @param string $pathToDemFile absolute path to the DEM definition in JSON format.
      * @param string $pathToDemNode as "/dBEAR/package/Vendor/package/Module"
-     * @return DataObject
+     * @return Data
      * @throws \Exception
      */
     public function readDemPackage($pathToDemFile, $pathToDemNode)
@@ -130,7 +131,7 @@ class Dem
                 }
             }
         }
-        $result = new DataObject($data);
+        $result = new Data($data);
         return $result;
     }
 }
