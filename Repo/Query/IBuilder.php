@@ -7,16 +7,17 @@ namespace Flancer32\Lib\Repo\Repo\Query;
 
 /**
  * Interface for selection query builders. Queries can be based on other selection queries.
+ * @deprecated use \Flancer32\Lib\Repo\Api\App\Repo\Query\Builder
  */
 interface  IBuilder
 {
     /**
      * Build selection query (optionally) based on other query.
      *
-     * @param \Flancer32\Lib\Repo\Fw\Db\Select|null $source
-     * @return \Flancer32\Lib\Repo\Fw\Db\Select
+     * @param \Flancer32\Lib\Repo\Api\App\Repo\Select|null $source
+     * @return \Flancer32\Lib\Repo\Api\App\Repo\Select
      */
-    public function build(\Flancer32\Lib\Repo\Fw\Db\Select $source = null);
+    public function build(\Flancer32\Lib\Repo\Api\App\Repo\Select $source = null);
 
     /**
      * Get SELECT COUNT query.
