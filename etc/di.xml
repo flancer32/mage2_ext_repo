@@ -1,6 +1,10 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
 
-    <preference for="\Flancer32\Lib\Repo\Repo\IGeneric" type="\Flancer32\Lib\Repo\Repo\Def\Generic"/>
+    <preference for="\Flancer32\Lib\Repo\Api\Helper\Dem"
+                type="\Flancer32\Lib\Repo\Helper\Dem"/>
+
+    <preference for="\Flancer32\Lib\Repo\Repo\IGeneric"
+                type="\Flancer32\Lib\Repo\Repo\Def\Generic"/>
 
 </config>

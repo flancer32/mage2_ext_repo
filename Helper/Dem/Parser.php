@@ -3,7 +3,7 @@
  * User: Alex Gusev <alex@flancer64.com>
  */
 
-namespace Flancer32\Lib\Repo\Setup\Dem;
+namespace Flancer32\Lib\Repo\Helper\Dem;
 
 /**
  * Parse DEM structures and return data to process in \Vendor\Module\Setup\InstallSchema classes.

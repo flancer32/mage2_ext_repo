@@ -4,7 +4,7 @@
  *
  * User: Alex Gusev <alex@flancer64.com>
  */
-namespace Flancer32\Lib\Repo\Setup\Dem;
+namespace Flancer32\Lib\Repo\Helper\Dem;
 
 class Cfg {
     const ACTION = 'action';

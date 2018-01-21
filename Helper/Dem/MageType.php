@@ -3,7 +3,7 @@
  * User: Alex Gusev <alex@flancer64.com>
  */
 
-namespace Flancer32\Lib\Repo\Setup\Dem;
+namespace Flancer32\Lib\Repo\Helper\Dem;
 
 use Magento\Framework\DB\Adapter\AdapterInterface as Dba;
 use Magento\Framework\DB\Ddl\Table as Ddl;
