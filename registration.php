@@ -1,6 +1,6 @@
 <?php
 /**
- * Script to register M2-module
+ * Register Magneto module on composer's 'install' event.
  *
  * User: Alex Gusev <alex@flancer64.com>
  */

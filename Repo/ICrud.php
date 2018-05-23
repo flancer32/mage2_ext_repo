@@ -2,9 +2,8 @@
 /**
  * User: Alex Gusev <alex@flancer64.com>
  */
-namespace Flancer32\Lib\Repo\Repo;
 
-use Flancer32\Lib\DataObject;
+namespace Flancer32\Lib\Repo\Repo;
 
 /**
  * Base interface for CRUD repositories (general Create-Read-Update-Delete operations).
@@ -15,9 +14,9 @@ interface ICrud
     /**
      * Create new data instance (simple entity or aggregate) using $data. Exception is thrown in case of any error.
      *
-     * @param DataObject|array $data
-     * @return bool|int|string|array|DataObject ID (integer|string|array) or 'true|false' (if insertion is failed)
-     * or array|DataObject (if newly created object is returned).
+     * @param \Flancer32\Lib\Data|array $data
+     * @return bool|int|string|array|\Flancer32\Lib\Data ID (integer|string|array) or 'true|false' (if insertion is
+     *     failed) or array|DataObject (if newly created object is returned).
      */
     public function create($data);
 
@@ -51,7 +50,7 @@ interface ICrud
     /**
      * Update instance in the DB (look up by ID values).
      *
-     * @param array|DataObject $data
+     * @param array|\Flancer32\Lib\Data $data
      * @param int|string|array $id
      * @return int The number of affected rows.
      */

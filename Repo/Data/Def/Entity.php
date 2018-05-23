@@ -7,7 +7,7 @@
 namespace Flancer32\Lib\Repo\Repo\Data\Def;
 
 abstract class Entity
-    extends \Flancer32\Lib\DataObject
+    extends \Flancer32\Lib\Data
     implements \Flancer32\Lib\Repo\Repo\Data\IEntity
 {
 

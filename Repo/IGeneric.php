@@ -2,9 +2,8 @@
 /**
  * User: Alex Gusev <alex@flancer64.com>
  */
-namespace Flancer32\Lib\Repo\Repo;
 
-use Flancer32\Lib\DataObject;
+namespace Flancer32\Lib\Repo\Repo;
 
 /**
  * Interface for generic repository to do universal operations (CRUD) with simple entities (not aggregates).
@@ -15,7 +14,7 @@ interface IGeneric
      * Create new $entity instance using $data.
      *
      * @param string $entity Entity name (not table name).
-     * @param array|DataObject $bind [COL_NAME=>$value, ...]
+     * @param array|\Flancer32\Lib\Data $bind [COL_NAME=>$value, ...]
      *
      * @return int|null ID of the inserted record or nothing (in case of complex primary key, for example).
      */
@@ -72,7 +71,7 @@ interface IGeneric
 
     /**
      * @param string $entity Entity name (not table name).
-     * @param array|DataObject $bind [COL_NAME=>$value, ...]
+     * @param array|\Flancer32\Lib\Data $bind [COL_NAME=>$value, ...]
      *
      * @return int ID of the inserted record if PK is an INT and new record is added.
      */
@@ -80,7 +79,7 @@ interface IGeneric
 
     /**
      * @param string $entity Entity name (not table name).
-     * @param array|DataObject $bind [COL_NAME=>$value, ...]
+     * @param array|\Flancer32\Lib\Data $bind [COL_NAME=>$value, ...]
      * @param mixed $where
      *
      * @return int Count of the updated rows.

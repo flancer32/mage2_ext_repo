@@ -4,8 +4,6 @@
  */
 namespace Flancer32\Lib\Repo\Repo;
 
-use Flancer32\Lib\DataObject;
-
 /**
  * Base interface for data sources repository (read-only mode).
  */
@@ -38,7 +36,7 @@ interface IDataSource
      * Get the data instance by ID (ID can be an array for complex primary keys).
      *
      * @param int|string|array $id
-     * @return DataObject|array|bool Found instance data or 'false'
+     * @return \Flancer32\Lib\Data|array|bool Found instance data or 'false'
      *
      * @SuppressWarnings(PHPMD.ShortVariable)
      */

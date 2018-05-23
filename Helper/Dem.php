@@ -5,18 +5,20 @@
  * User: Alex Gusev <alex@flancer64.com>
  */
 
-namespace Flancer32\Lib\Repo\Setup\Dem;
+namespace Flancer32\Lib\Repo\Helper;
 
-use Flancer32\Lib\Data as DataObject;
-use Flancer32\Lib\Repo\Setup\Dem\Cfg as DemCfg;
+use Flancer32\Lib\Data as Data;
+use Flancer32\Lib\Repo\Helper\Dem\Cfg as DemCfg;
+use Flancer32\Lib\Repo\Helper\Dem\DemType as DemType;
 
-class Tool
+class Dem
+    implements \Flancer32\Lib\Repo\Api\Helper\Dem
 {
     /** Path separator between packages. */
     const PS = \Flancer32\Lib\Repo\Config::DEM_PS;
     /** @var \Psr\Log\LoggerInterface */
     protected $logger;
-    /** @var \Flancer32\Lib\Repo\Setup\Dem\Parser */
+    /** @var \Flancer32\Lib\Repo\Helper\Dem\Parser */
     protected $parser;
     /** @var \Magento\Framework\App\ResourceConnection */
     protected $resource;
@@ -29,7 +31,7 @@ class Tool
     public function __construct(
         \Magento\Framework\App\ResourceConnection $resource,
         \Psr\Log\LoggerInterface $logger,
-        \Flancer32\Lib\Repo\Setup\Dem\Parser $parser
+        \Flancer32\Lib\Repo\Helper\Dem\Parser $parser
     ) {
         $this->resource = $resource;
         $this->conn = $resource->getConnection();
@@ -38,9 +40,11 @@ class Tool
     }
 
     /**
+     * Create entity structures in DB (table, indexes, foreign keys) according to DEM definition.
      *
      * @param $entityAlias string Alias of the entity ('prxgt_acc_type_asset').
      * @param $demEntity array Associative array with entity definition (DEM subtree).
+     * @throws \Zend_Db_Exception
      */
     public function createEntity($entityAlias, $demEntity)
     {
@@ -110,7 +114,7 @@ class Tool
      *
      * @param string $pathToDemFile absolute path to the DEM definition in JSON format.
      * @param string $pathToDemNode as "/dBEAR/package/Vendor/package/Module"
-     * @return DataObject
+     * @return Data
      * @throws \Exception
      */
     public function readDemPackage($pathToDemFile, $pathToDemNode)
@@ -127,7 +131,7 @@ class Tool
                 }
             }
         }
-        $result = new DataObject($data);
+        $result = new Data($data);
         return $result;
     }
 }
