@@ -1,2 +1,3 @@
 # mage2_ext_repo
-Basic access to data repository
+
+This module is deprecated.
